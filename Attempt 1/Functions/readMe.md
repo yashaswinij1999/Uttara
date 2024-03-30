@@ -21,3 +21,21 @@ Eg: x=0 false, x=25 false, x=91 false, x=67 true ](#)
 > - if x equals to 2 || 3|| 5 || 7 return true.
 > - if x is divisble by 2 return false.
 > - check if the number is divisble by odd numbers in a for loop incrementing the `i` by 2.
+
+Q2. [Write functions to print following patterns.](#)
+
+```
+     1        *
+     12       **
+     123      ***
+     1234     ****
+     12345    *****
+
+```
+
+> - create a function with name `isPattern.js`
+> - The functions should have 2 for loops with varibles i and j.
+> - iterate the first loop starting from 1 to 5.
+> - The loop j should be nested inside first loop.
+> - iterate the second loop starting from 1 to value lesser than i.
+>   log the values inside the second loop.
