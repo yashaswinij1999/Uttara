@@ -14,7 +14,7 @@ This project contains practice exercises focused on implementing various control
 - Repeat the process for each practice problem until all problems are solved.
 
 Q1. [Check whether given number ‘x’ is Prime or not. isPrime(x) : bool
-Eg: x=0, false x=25, false x=91, false x=67, true ](#)
+Eg: x=0 false, x=25 false, x=91 false, x=67 true ](#)
 
 > - create function name `isPrime`
 > - if x equals to zero or one return false.
