@@ -11,8 +11,12 @@ const isPrime = function (x) {
     return false;
   }
 
-  
-
+  for (let i = 3; i < x; i += 2) {
+    if (x % i === 0) {
+      return false;
+    }
+  }
+  return true;
 };
 
-console.log(isPrime(16));
+console.log(isPrime(67));
