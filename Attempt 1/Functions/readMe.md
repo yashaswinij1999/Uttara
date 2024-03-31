@@ -77,3 +77,18 @@ In order to achieve the desired output, follow the below steps:
 3. **Concatenate Asterisks** Within each line iteration, concatenate the appropriate number of asterisks to form the pattern. The number of asterisks on each line corresponds to the line number.
 4. **Print Line:** After completing the inner loop, print the concatenated line to the console.
 5. **Repeat:** Repeat steps 3-5 for the desired number of lines.
+
+Q3.[Write a funcIon to implement bubble sort algorithm : bubbleSort(arr)
+Eg: arr = [9,6,4,10,12] è arr=[4,6,9,10,12]](#)
+
+In order to achieve the desired output, follow the below steps:
+
+1. **Define a Function:** Create a JavaScript function named bubbleSort that takes an array (arr) as input.
+2. **Initialize Variables:** Inside the function, initialize a variable n to store the length of the array (arr).
+3. **Outer Loop for Passes:** Use a for loop to iterate over the array for each pass. The loop should run from index 0 to n - 1.
+4. **Initialize Swapped Flag:** Within the outer loop, initialize a boolean variable swapped to false. This flag will be used to determine if any swaps are made during a pass.
+5. **Inner Loop for Comparisons:** Use another for loop nested inside the outer loop to iterate over the array elements for comparisons. This loop should run from index 0 to n - i - 1, where i is the current pass number.
+6. **Compare Adjacent Elements:** Within the inner loop, compare each element with its adjacent element. If the current element is greater than the next element, perform a swap.
+7. **Swap Elements:** If a swap is performed, swap the positions of the current element and the next element using array destructuring assignment.
+8. **Check for Swaps:** After completing the inner loop, check if any swaps were made during the pass. If no swaps were made (swapped remains false), break out of the outer loop as the array is already sorted.
+9. **Return Sorted Array:** Outside the loops, return the sorted array (arr).
