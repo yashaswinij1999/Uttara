@@ -11,12 +11,12 @@ const isPrime = function (x) {
     return false;
   }
 
-  for (let i = 3; i < x; i += 2) {
+  for (let i = 2; i <= Math.sqrt(x); i++) {
     if (x % i === 0) {
-      return false;
+      return false; // If x is divisible by any number, it is not prime
     }
   }
   return true;
 };
 
-console.log(isPrime(67));
+console.log(isPrime(99));
