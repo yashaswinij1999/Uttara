@@ -26,7 +26,7 @@ In order to acheive the above output, you can follow below steps:
 
 4. **Return Result:** After completing the loop, return false if 'x' is divisible by any number in the range, indicating that it is not prime. Otherwise, return true.
 
-5. **RTest Cases:** Test the function with different values of 'x' to verify its correctness.
+5. **Test Cases:** Test the function with different values of 'x' to verify its correctness.
 
 Q2.a [Write functions to print following patterns.](#)
 
