@@ -78,8 +78,8 @@ In order to achieve the desired output, follow the below steps:
 4. **Print Line:** After completing the inner loop, print the concatenated line to the console.
 5. **Repeat:** Repeat steps 3-5 for the desired number of lines.
 
-Q3.[Write a funcIon to implement bubble sort algorithm : bubbleSort(arr)
-Eg: arr = [9,6,4,10,12] è arr=[4,6,9,10,12]](#)
+Q3.[Write a function to implement bubble sort algorithm : bubbleSort(arr) ,
+Eg: arr = [9,6,4,10,12] arr=[4,6,9,10,12]](#)
 
 In order to achieve the desired output, follow the below steps:
 
