@@ -104,3 +104,18 @@ In order to achieve the desired output, please follow the below steps:
 4. **Loop for lines:** Use a loop to iterate over the desired number of lines (in this case, absed on nth value).
 5. **Print value:**Print the final value to the console.
 6. **swap the variables:** swap the current value to the second value, second value to the first value.
+
+Q6. [Generate multiplication table from 1 to 10 as array of arrays using looping
+constructs. O/P : [[1,2,3,4,5,6,7,8,9,10], [2,4,6,8,10,12,14,16,18,20],[10,20,30,40,50,60,70,80,90,100]]](#)
+
+In order to acheive the desired output, please follow the below steps,
+
+1. **Describe the function:** Create a javascript function with name tableArray.
+2. **Intialise variables:** Inside a function, create an empty array to store the multiplication table..
+3. **Outer Loop:** Use a loop to iterate from 1 to 10 for the multiplicand (outer loop).
+4. **Intialise array inside loop:** Inside the outer loop, create an inner array to store the multiplication results for the current multiplicand.
+5. **Inner Loop:** Use another loop to iterate from 1 to 10 for the multiplier (inner loop).
+6. **logic:** Calculate the product of the current multiplicand and multiplier and push it to the inner array.
+7. **Push** After completing the inner loop, push the inner array to the main array.
+8. **Repeat** Repeat steps 3-6 for all multiplicands from 1 to 10.
+9. **Return Array:** Return the resulting array of arrays representing the multiplication table.
