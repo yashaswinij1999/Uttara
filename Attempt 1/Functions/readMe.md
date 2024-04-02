@@ -97,3 +97,10 @@ Q5. [Given “n” , return nth Fibonacci number.
 Eg: n=0, 0; n=1, 1; n=10, 55; n=15, 610; n=20, 6765](#)
 
 In order to achieve the desired output, please follow the below steps:
+
+1. **Describe the function:** Create a JavaScript function named nFibnocci that takes an number (n) as input.
+2. **Intialise Varibales:** Inside the function, initialize a variable f,s and r to store the values.
+3. **Apply logic:** Add f and s to r variable `(r = f+s)`
+4. **Loop for lines:** Use a loop to iterate over the desired number of lines (in this case, absed on nth value).
+5. **Print value:**Print the final value to the console.
+6. **swap the variables:** swap the current value to the second value, second value to the first value.
