@@ -92,3 +92,8 @@ In order to achieve the desired output, follow the below steps:
 7. **Swap Elements:** If a swap is performed, swap the positions of the current element and the next element using array destructuring assignment.
 8. **Check for Swaps:** After completing the inner loop, check if any swaps were made during the pass. If no swaps were made (swapped remains false), break out of the outer loop as the array is already sorted.
 9. **Return Sorted Array:** Outside the loops, return the sorted array (arr).
+
+Q5. [Given “n” , return nth Fibonacci number.
+Eg: n=0, 0; n=1, 1; n=10, 55; n=15, 610; n=20, 6765](#)
+
+In order to achieve the desired output, please follow the below steps:
