@@ -3,7 +3,7 @@ function nFibnocci(n) {
   let s = 1;
   let r = 0;
 
-  for (let i = 0; i < n; i++) {
+  for (let i = 1; i < n; i++) {
     r = f + s;
     console.log(r);
     f = s;
@@ -11,4 +11,4 @@ function nFibnocci(n) {
   }
 }
 
-nFibnocci(8);
+nFibnocci(10);
