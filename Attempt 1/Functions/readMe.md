@@ -119,3 +119,13 @@ In order to acheive the desired output, please follow the below steps,
 7. **Push** After completing the inner loop, push the inner array to the main array.
 8. **Repeat** Repeat steps 3-6 for all multiplicands from 1 to 10.
 9. **Return Array:** Return the resulting array of arrays representing the multiplication table.
+
+Q7.[Generate prime numbers from 1 to 100 (Store in an array and return)](#)
+
+1. **Describe the function** Create Javascript function with name `generatePrime.js`
+2. **Intialise** Inside a function intialise a variable of an array to store all prime numbers.
+3. **Loop** Use a loop to iterate from 1 to 100.
+4. **Declare function** Create a function to check whether the given number is prime or not.
+5. **call a function** Inside a loop, call the function `isPrime` to check whether the given number is prime or not.
+6. **Push** If the result is true, push the given value into the array.
+7. **Return** After completing the loop, return the array.
