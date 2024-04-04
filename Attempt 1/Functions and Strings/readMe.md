@@ -15,7 +15,7 @@ This project contains practice exercises focused on implementing various functio
 
 ### Practice Problems
 
-Q1.[Reverse given Array. reverseArray(arr)
+Q1. [Reverse given Array. reverseArray(arr)
 I/P : [1,3,5,2,6] O/P : [6,2,5,3,1]](#)
 
 1. **Describe the function:** Create JavaScript function named `reverseArray.js` that takes an array as input.
