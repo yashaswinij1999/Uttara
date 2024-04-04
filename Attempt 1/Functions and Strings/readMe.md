@@ -36,3 +36,8 @@ O/P: arro = [91,93,98]](#)
 6. **Swap Elements:** If a swap is performed, swap the positions of the current element and the next element.
 7. **Check for Swaps:**After completing the inner loop, check if any swaps were made during the pass. If no swaps were made (swapped remains false), break out of the outer loop as the array is already sorted.
 8. **Return Sorted Array:** Outside the loops, return the sorted array (arr).
+
+Q3. [WAF to reverse string : reverseString(str) : string](#)
+[Eg: JavaScript Arrayè yarrA tpircSavaJ ](#)
+
+1. **Describe Function:**
