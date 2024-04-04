@@ -45,3 +45,11 @@ Q3. [WAF to reverse string : reverseString(str) : string](#)
 3. **Loop:** Inside the function, a loop iterates over the characters of the input string, starting from the last character and moving towards the first.
 4. **Concatenate :** During each iteration, the current character is appended to a new string in reverse order.
 5. **Return:**Once all characters have been processed, the function returns the new string with reversed characters.
+
+Q4. [WAF to check whether given string is palindrome: checkPalindrome(str) : boolean ,](#)
+[Eg: madam = true, madama = false](#)
+
+1. **Describe Function:** Create a JavaScript function named `checkPalindrome.js` which takes string input.
+2. **loop:** Using for loop, iterate over each character in a string.
+3. **Apply Logic:** Inside the loop check whether first character and the last character are similar and simultaneoulsy check for next adjecent characters.
+4. **Return:** If condition satisfies return boolean value.
