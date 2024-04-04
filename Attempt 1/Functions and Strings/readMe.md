@@ -40,4 +40,8 @@ O/P: arro = [91,93,98]](#)
 Q3. [WAF to reverse string : reverseString(str) : string](#)
 [Eg: JavaScript Arrayè yarrA tpircSavaJ ](#)
 
-1. **Describe Function:**
+1. **Describe Function:** Create a JavaScript function named `reverseString.js` which takes string as input.
+2. **Initialise the variable:** Inside a function create a variable to store string value.
+3. **Loop:** Inside the function, a loop iterates over the characters of the input string, starting from the last character and moving towards the first.
+4. **Concatenate :** During each iteration, the current character is appended to a new string in reverse order.
+5. **Return:**Once all characters have been processed, the function returns the new string with reversed characters.
