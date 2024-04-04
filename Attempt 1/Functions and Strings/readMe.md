@@ -28,6 +28,11 @@ Q2. [Given an array, return k largest elements in the array. kLargest(arri, k) :
 [I/P: arri = [93, 17, 56, 91,98, 33, 9, 38, 55, 78, 29, 81, 60] k=3 ,
 O/P: arro = [91,93,98]](#)
 
-1. **Describe Function:** Create a JavaScript Function named `largestElement.js` which takes array and int as parameters.
-2. **Intialise Variable:** Inside the function intialise a boolean value to false.
-3. 
+1. **Describe Function:** Create a JavaScript Function named `largestElement.js` which takes an array and int as parameters.
+2. **Intialise Variable:** Inside the function initialise a variable to store boolean value.
+3. **Outer Loop for Passess:** Use for loop to iterate over array for each pass.The loop should run from index 0 to length-1.
+4. **Inner Loop for Comparisons:**Use another for loop nested inside the outer loop to iterate over the array elements for comparisons. This loop should run from index 0 to length -1.
+5. **Compare Adjacent Elements:** Within the inner loop, compare each element with its adjacent element. If the current element is greater than the next element, perform a swap.
+6. **Swap Elements:** If a swap is performed, swap the positions of the current element and the next element.
+7. **Check for Swaps:**After completing the inner loop, check if any swaps were made during the pass. If no swaps were made (swapped remains false), break out of the outer loop as the array is already sorted.
+8. **Return Sorted Array:** Outside the loops, return the sorted array (arr).
