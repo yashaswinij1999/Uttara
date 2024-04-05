@@ -63,3 +63,12 @@ Q5. [WAF to implement insertion sort algorithm. insertionSort(arr)](#)
 4. **Nested Loop:**Create another while loop to compare the current element with its previous element.
 5. **Insertion:** Elements are shifted to the right to make space for inserting the current element at its sorted position.
 6. **Result:** the sorted array is returned and Print the final value to the console.
+
+Q6. [WAF to reverse words in sentence : revWords(Str) : str](#)
+[Eg: I/P: “We Love JS” O/P: “eW evoL SJ](#)
+
+1. **Describe Function:** Create JavaScript function which accepts string as input.
+2. **Split the Space:** Inside a Function split the space of the given string.
+3. **Outer Loop:** Using for loop access each element of an array and store it it in variable.
+4. **Nested loop:** Iterate over each element of any array, access its content in reverse direction.
+5. **Concatenate:** Concatinate the values and print to the console.
