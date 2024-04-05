@@ -4,7 +4,7 @@ function reverseString(str) {
 
   for (let i = reverse.length; i >= 0; i--) {
     console.log(reverse[i]);
-    lines += " " + reverse[i];
+    lines += reverse[i];
   }
 }
 
