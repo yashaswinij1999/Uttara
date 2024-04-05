@@ -31,10 +31,10 @@ O/P: arro = [91,93,98]](#)
 1. **Describe Function:** Create a JavaScript Function named `largestElement.js` which takes an array and int as parameters.
 2. **Intialise Variable:** Inside the function initialise a variable to store boolean value.
 3. **Outer Loop for Passess:** Use for loop to iterate over array for each pass.The loop should run from index 0 to length-1.
-4. **Inner Loop for Comparisons:**Use another for loop nested inside the outer loop to iterate over the array elements for comparisons. This loop should run from index 0 to length -1.
+4. **Inner Loop for Comparisons:** Use another for loop nested inside the outer loop to iterate over the array elements for comparisons. This loop should run from index 0 to length -1.
 5. **Compare Adjacent Elements:** Within the inner loop, compare each element with its adjacent element. If the current element is greater than the next element, perform a swap.
 6. **Swap Elements:** If a swap is performed, swap the positions of the current element and the next element.
-7. **Check for Swaps:**After completing the inner loop, check if any swaps were made during the pass. If no swaps were made (swapped remains false), break out of the outer loop as the array is already sorted.
+7. **Check for Swaps:** After completing the inner loop, check if any swaps were made during the pass. If no swaps were made (swapped remains false), break out of the outer loop as the array is already sorted.
 8. **Return Sorted Array:** Outside the loops, return the sorted array (arr).
 
 Q3. [WAF to reverse string : reverseString(str) : string](#)
@@ -44,7 +44,7 @@ Q3. [WAF to reverse string : reverseString(str) : string](#)
 2. **Initialise the variable:** Inside a function create a variable to store string value.
 3. **Loop:** Inside the function, a loop iterates over the characters of the input string, starting from the last character and moving towards the first.
 4. **Concatenate :** During each iteration, the current character is appended to a new string in reverse order.
-5. **Return:**Once all characters have been processed, the function returns the new string with reversed characters.
+5. **Return:** Once all characters have been processed, the function returns the new string with reversed characters.
 
 Q4. [WAF to check whether given string is palindrome: checkPalindrome(str) : boolean ,](#)
 [Eg: madam = true, madama = false](#)
@@ -60,7 +60,7 @@ Q5. [WAF to implement insertion sort algorithm. insertionSort(arr)](#)
 1. **Describe Function:** Create JavaScript function which accepts an array as input.
 2. **Outer Loop for Passes:** Inside the function loop over the array from left to right starting from second element towards the length of the array.
 3. **Intialise Variables:** Inside a loop intialise variable `j` which is equal to previous value of current element `i-1` and another variable to store current value..
-4. **Nested Loop:**Create another while loop to compare the current element with its previous element.
+4. **Nested Loop:** Create another while loop to compare the current element with its previous element.
 5. **Insertion:** Elements are shifted to the right to make space for inserting the current element at its sorted position.
 6. **Result:** the sorted array is returned and Print the final value to the console.
 
