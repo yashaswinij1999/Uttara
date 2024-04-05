@@ -53,3 +53,13 @@ Q4. [WAF to check whether given string is palindrome: checkPalindrome(str) : boo
 2. **loop:** Using for loop, iterate over each character in a string.
 3. **Apply Logic:** Inside the loop check whether first character and the last character are similar and simultaneoulsy check for next adjecent characters.
 4. **Return:** If condition satisfies return boolean value.
+
+Q5. [WAF to implement insertion sort algorithm. insertionSort(arr)](#)
+[Eg: arr = [9,6,4,10,12] è arr=[4,6,9,10,12]](#)
+
+1. **Describe Function:** Create JavaScript function which accepts an array as input.
+2. **Outer Loop for Passes:** Inside the function loop over the array from left to right starting from second element towards the length of the array.
+3. **Intialise Variables:** Inside a loop intialise variable `j` which is equal to previous value of current element `i-1` and another variable to store current value..
+4. **Nested Loop:**Create another while loop to compare the current element with its previous element.
+5. **Insertion:** Elements are shifted to the right to make space for inserting the current element at its sorted position.
+6. **Result:** the sorted array is returned and Print the final value to the console.
