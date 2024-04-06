@@ -4,11 +4,11 @@ class University {
   }
 
   add(dept) {
-    if (this.dpt.includes(dept)) {
-      console.log("deparment already exists");
-    } else {
+    if (!this.dpt.includes(dept)) {
       this.dpt.push(dept);
       console.log(`department ${dept} added sucessfully`);
+    } else {
+      console.log("deparment already exists");
     }
   }
 
@@ -24,12 +24,22 @@ class University {
   }
 
   display() {
-    console.log(this.dpt);
+    if (this.dpt.length === 0) {
+      console.log(`no departments found in ${this.name}`);
+    } else {
+      this.dpt.forEach((element, index) => {
+        console.log(`${index + 1} ${element}`);
+      });
+    }
   }
 }
 
-banglore = new University("Bangalore", ["science"]);
+data = [];
+banglore = new University("Bangalore", data);
 console.log(banglore.name);
-console.log(banglore.dpt);
+banglore.add("science");
 banglore.add("social");
-banglore.add("maths");
+console.log(banglore.dpt);
+banglore.add("kannada");
+console.log(banglore.dpt);
+banglore.display();
