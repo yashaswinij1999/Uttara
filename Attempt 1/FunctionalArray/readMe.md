@@ -43,8 +43,16 @@ Q3.[Compute total amount given array of products with name, price and quantity](
 
 Q4.[WAF to reverse string Func3onal way: reverseString(str) : string](#)
 [Eg: JavaScript è tpircSavaJ](#)
+
 - Create Javascript function named `reverseString.js` takes string as input.
 - Convert the string into array using `split` method.
 - Iterate over the array in the reverse direction.
 - Concatenate the each character of array into a string variable.
 - After completion of loop, return that reversed string.
+
+Q5.[Remove duplicates in an array. removeDuplicates(arr) : arr (Hint: use includes,](#)
+[indexOf methods in array)](#)
+- Create Javascript function named `removeDuplicates.js` takes array as parameter.
+- Inside a function iterate over the given parameter using filter method takes index,currentElement and array reference as parameters.
+- Uses indexOf method to check whether currentElement index is equal to that particular index, if yes returns that element.
+- Returns new array with unique elements.
