@@ -52,6 +52,7 @@ Q4.[WAF to reverse string Func3onal way: reverseString(str) : string](#)
 
 Q5.[Remove duplicates in an array. removeDuplicates(arr) : arr (Hint: use includes,](#)
 [indexOf methods in array)](#)
+
 - Create Javascript function named `removeDuplicates.js` takes array as parameter.
 - Inside a function iterate over the given parameter using filter method takes index,currentElement and array reference as parameters.
 - Uses indexOf method to check whether currentElement index is equal to that particular index, if yes returns that element.
