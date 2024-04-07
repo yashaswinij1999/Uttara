@@ -31,3 +31,12 @@ Q2.[Print Prime numbers from 1……100](#)
 - Implement a function to check the number is prime or not.
 - Filter method takes a callback as parameter and apply that functions condition on each and every element in the array.
 - The Filter method returns a new array which contains 25 prime numbers from 1 to 100.
+
+Q3.[Compute total amount given array of products with name, price and quantity](#)
+[Eg: let obj_arr = [{ name: "soap", price: 15, quan3ty: 3 }]](#)
+[{ name: "salt", price: 20, quan3ty: 5 }](#)
+[{ name: "sugar", price: 45, quan3ty: 2 }](#)
+
+- create javascript function named `getAmount.js` takes an array as input.
+- Implement reduce method on array which takes current element and sum as parameters.
+- Reduce method iterates over current element and adds current elements price, multiplied by its quantity to the sum value and finally it returns totalSum value.
