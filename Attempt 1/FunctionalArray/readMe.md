@@ -40,3 +40,11 @@ Q3.[Compute total amount given array of products with name, price and quantity](
 - create javascript function named `getAmount.js` takes an array as input.
 - Implement reduce method on array which takes current element and sum as parameters.
 - Reduce method iterates over current element and adds current elements price, multiplied by its quantity to the sum value and finally it returns totalSum value.
+
+Q4.[WAF to reverse string Func3onal way: reverseString(str) : string](#)
+[Eg: JavaScript è tpircSavaJ](#)
+- Create Javascript function named `reverseString.js` takes string as input.
+- Convert the string into array using `split` method.
+- Iterate over the array in the reverse direction.
+- Concatenate the each character of array into a string variable.
+- After completion of loop, return that reversed string.
