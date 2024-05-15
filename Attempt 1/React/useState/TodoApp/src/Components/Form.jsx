@@ -1,17 +1,13 @@
 import React, { useState } from "react";
+import useForm from "../Hooks/useForm";
 
 function Form({ addTodo }) {
-  const [todo, setTodo] = useState("");
-
-  const handleChange = function (e) {
-    setTodo(e.target.value);
-  };
+  const [todo, handleChange, reset] = useForm("");
 
   const handleSubmit = function () {
     addTodo(todo);
+    reset();
   };
-
-   
 
   return (
     <div className="m-auto flex justify-center p-2 items-center ">
