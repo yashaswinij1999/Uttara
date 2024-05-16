@@ -1,13 +1,16 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import RandomUsersList from "./RandomUsersList";
 
 function RandomUsers() {
   const [userData, setUserData] = useState([]);
-  const [numOfContacts, setContacts] = useState();
+  const [numOfContacts, setContacts] = useState(0);
+  const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     getData();
-  });
+  }, [numOfContacts]);
 
   async function getData() {
     try {
@@ -28,7 +31,7 @@ function RandomUsers() {
   return (
     <>
       {/* Input section */}
-      <div>RandomUsers</div>
+      <div className="text-xl ">RandomUsers</div>
       <div className="m-6">
         <input
           className="p-1 text-sm "
@@ -39,6 +42,8 @@ function RandomUsers() {
           onChange={handleChange}
         />
       </div>
+
+      <RandomUsersList userData={userData} numOfContacts={numOfContacts} />
     </>
   );
 }
