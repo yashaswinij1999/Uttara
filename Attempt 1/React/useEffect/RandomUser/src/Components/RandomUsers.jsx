@@ -5,10 +5,8 @@ import RandomUsersList from "./RandomUsersList";
 function RandomUsers() {
   const [userData, setUserData] = useState([]);
   const [numOfContacts, setContacts] = useState(0);
-  const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
     getData();
   }, [numOfContacts]);
 
