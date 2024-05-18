@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+html,
+body {
+  @apply min-h-screen bg-yellow-50;
+}

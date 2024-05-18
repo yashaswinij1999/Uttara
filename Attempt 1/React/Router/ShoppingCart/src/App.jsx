@@ -11,7 +11,7 @@ import Cart from "./Components/Cart";
 function App() {
   return (
     <>
-      <div className="min-h-screen bg-yellow-50">
+      <div>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,10 +1,13 @@
 import React from "react";
+import ShoppingCart from "./ShoppingCart";
 
 function Home() {
   return (
     <>
-      <div className="flex p-4">
-        <h1 className="text-2xl font-semibold text-red-500">Uttara</h1>
+      <div className="p-4">
+        <div className="h-screen mt-4">
+          <ShoppingCart />
+        </div>
       </div>
     </>
   );

@@ -6,9 +6,11 @@ function NavBar() {
     <div>
       <nav className="bg-slate-500 text-white border-2 flex p-4 justify-between ">
         <Link to={"/"}>Home</Link>
-        <div>
+        <div className="flex gap-2">
           <Link to={"/contact"}>Contact</Link>
-          <div></div>
+          <Link to={"/cart"}>
+            <div className="text-xl">🛒</div>
+          </Link>
         </div>
       </nav>
     </div>
