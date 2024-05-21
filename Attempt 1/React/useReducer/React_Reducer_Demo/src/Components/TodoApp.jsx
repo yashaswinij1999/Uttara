@@ -44,7 +44,12 @@ function TodoApp() {
 
   function reset() {
     setVal("");
-    currentId(null);
+    setCurrentId(null);
+  }
+
+  function deleteTodo(id) {
+    const removeTodo = todos.filter((el) => el.id !== id);
+    setTodos(removeTodo);
   }
 
   return (
@@ -62,7 +67,7 @@ function TodoApp() {
         <button onClick={handleSubmit}>add</button>
       )}
 
-      <TodoList todos={todos} getTodo={getTodo} />
+      <TodoList todos={todos} getTodo={getTodo} deleteTodo={deleteTodo} />
     </>
   );
 }
