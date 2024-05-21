@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TodoList from "./TodoList";
 import { v4 as uuidv4 } from "uuid";
 
@@ -6,9 +6,16 @@ const initialData = [{ id: 1, task: "buy milk" }];
 
 function TodoApp() {
   const [inval, setVal] = useState("");
-  const [todos, setTodos] = useState(initialData);
+  const [todos, setTodos] = useState(() => {
+    const todos = localStorage.getItem("todos");
+    return JSON.parse(todos) || initialData;
+  });
   const [isUpdate, setUpdate] = useState(false);
   const [currentId, setCurrentId] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   function addTodo(todo) {
     const newTodo = [...todos, { id: uuidv4(), task: todo }];
@@ -54,6 +61,7 @@ function TodoApp() {
 
   return (
     <>
+      <div></div>
       <div className="w-2/4 m-auto p-2 ">
         <input
           className="block p-2 m-2 w-full rounded-md "
