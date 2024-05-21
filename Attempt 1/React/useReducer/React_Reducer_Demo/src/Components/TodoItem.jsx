@@ -3,7 +3,7 @@ import React from "react";
 function TodoItem({ id, task, getTodo, deleteTodo }) {
   return (
     <>
-      <div className="m-auto w-2/4 flex items-center  bg-purple-100 rounded-md mt-2 justify-between ">
+      <div className="m-auto w-2/4 flex items-center text-white  bg-purple-400 rounded-md mt-2 justify-between ">
         <div key={id} className="w-2/4">
           {task}{" "}
         </div>
