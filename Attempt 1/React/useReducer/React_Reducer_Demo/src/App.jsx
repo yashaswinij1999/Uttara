@@ -7,7 +7,12 @@ import TodoApp from "./Components/TodoApp";
 function App() {
   return (
     <>
-      <TodoApp />
+      <nav className="bg-slate-500 text-white h-12 flex items-center justify-center">
+        Todo List
+      </nav>
+      <div className="m-auto bg-yellow-100 h-screen  ">
+        <TodoApp />
+      </div>
     </>
   );
 }

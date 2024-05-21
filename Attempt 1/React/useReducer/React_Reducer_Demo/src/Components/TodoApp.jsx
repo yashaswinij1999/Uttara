@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TodoList from "./TodoList";
 import { v4 as uuidv4 } from "uuid";
 
-const initialData = [{ id: 1, task: "buyMilk" }];
+const initialData = [{ id: 1, task: "buy milk" }];
 
 function TodoApp() {
   const [inval, setVal] = useState("");
@@ -54,18 +54,31 @@ function TodoApp() {
 
   return (
     <>
-      <input
-        value={inval}
-        placeholder="add Todo"
-        type="text"
-        onChange={(e) => setVal(e.target.value)}
-      />
+      <div className="w-2/4 m-auto p-2 ">
+        <input
+          className="block p-2 m-2 w-full rounded-md "
+          value={inval}
+          placeholder="add Todo"
+          type="text"
+          onChange={(e) => setVal(e.target.value)}
+        />
 
-      {isUpdate ? (
-        <button onClick={() => updateTodo(inval)}>update</button>
-      ) : (
-        <button onClick={handleSubmit}>add</button>
-      )}
+        {isUpdate ? (
+          <button
+            className="border-2 bg-blue-400 text-white p-2 w-full m-2"
+            onClick={() => updateTodo(inval)}
+          >
+            update
+          </button>
+        ) : (
+          <button
+            className="border-2 bg-blue-400 text-white p-2 w-full m-2"
+            onClick={handleSubmit}
+          >
+            add
+          </button>
+        )}
+      </div>
 
       <TodoList todos={todos} getTodo={getTodo} deleteTodo={deleteTodo} />
     </>
