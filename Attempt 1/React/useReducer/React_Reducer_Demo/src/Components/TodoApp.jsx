@@ -1,32 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import TodoList from "./TodoList";
 import { v4 as uuidv4 } from "uuid";
+import { reducer } from "./reducer";
 
 const initialData = [{ id: 1, task: "buy milk" }];
 
 function TodoApp() {
   const [inval, setVal] = useState("");
-  const [todos, setTodos] = useState(() => {
-    const todos = localStorage.getItem("todos");
-    return JSON.parse(todos) || initialData;
-  });
   const [isUpdate, setUpdate] = useState(false);
   const [currentId, setCurrentId] = useState(null);
+
+  const [todos, dispatch] = useReducer(reducer, initialData, () => {
+    const todos = localStorage.getItem("todos");
+    return JSON.parse(todos);
+  });
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
   function addTodo(todo) {
-    const newTodo = [...todos, { id: uuidv4(), task: todo }];
-    setTodos(newTodo);
+    dispatch({ type: "Add", payload: { id: uuidv4(), task: todo } });
+    reset();
   }
 
   function updateTodo(newTask) {
-    const update = todos.map((el) =>
-      el.id === currentId ? { ...el, task: newTask } : el
-    );
-    setTodos(update);
+    dispatch({ type: "update", payload: { id: currentId, task: newTask } });
     setUpdate(false);
     reset();
   }
@@ -55,8 +54,7 @@ function TodoApp() {
   }
 
   function deleteTodo(id) {
-    const removeTodo = todos.filter((el) => el.id !== id);
-    setTodos(removeTodo);
+    dispatch({ type: "delete", payload: id });
   }
 
   return (
