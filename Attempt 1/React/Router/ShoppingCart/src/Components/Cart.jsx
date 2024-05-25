@@ -10,19 +10,29 @@ function Cart() {
         <p className="text-red-400">Your shopping cart is empty </p>
       ) : (
         <div>
-          <div>
-            <h3>Your Cart Items</h3>
-            <div className="min-h-screen border-2 p-4 m-auto">
-              {state.map((el) => (
-                <div className="w-1/2 h-32 bg-pink-300 flex sm:flex-row md:flex-col border-2 ">
-                  <div className="border-2 m-2">
-                    <div className="w-24 h-24 border-2">
-                      <img src={el.image} />
-                    </div>
+          <div className="border-2 min-h-screen m-2">
+            <h3 className="mb-2">Your Cart Items</h3>
+            {state.map((el) => (
+              <div className="m-4">
+                <div className=" w-1/2 m-auto h-1/2 flex bg-white rounded-md shadow-lg">
+                  <div className="w-24 ">
+                    <img
+                      src={el.image}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="m-2  flex flex-col justify-center items-center p-2">
+                    <p>{el.title}</p>
+                    <p>{el.price}</p>
+                  </div>
+                  <div className=" flex justify-center items-center p-2">
+                    <div className="p-1">➕</div>
+                    <div className="p-1">2</div>
+                    <div className="p-1">➖</div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       )}
