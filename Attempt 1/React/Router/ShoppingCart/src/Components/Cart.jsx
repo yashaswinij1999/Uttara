@@ -10,11 +10,11 @@ function Cart() {
         <p className="text-red-400">Your shopping cart is empty </p>
       ) : (
         <div>
-          <div className="border-2 min-h-screen m-2">
+          <div className="min-h-screen m-2">
             <h3 className="mb-2">Your Cart Items</h3>
             {state.map((el) => (
-              <div className="m-4">
-                <div className=" w-1/2 m-auto h-1/2 flex bg-white rounded-md shadow-lg">
+              <div key={el.id} className="m-4">
+                <div className=" w-1/2 m-auto h-1/2 flex bg-white rounded-md shadow-lg justify-between">
                   <div className="w-24 ">
                     <img
                       src={el.image}
