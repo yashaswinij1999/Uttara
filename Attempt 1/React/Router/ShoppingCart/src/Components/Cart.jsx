@@ -27,8 +27,8 @@ function Cart() {
           <div className="min-h-screen m-2">
             <h3 className="mb-2">Your Cart Items</h3>
             {state.map((el) => (
-              <div key={el.id} className="m-4">
-                <div className=" w-1/2 m-auto h-1/2 flex bg-white rounded-md shadow-lg justify-between">
+              <div key={el.id} className="m-4 ">
+                <div className="flex w-1/2 m-auto h-1/2  bg-white rounded-md shadow-lg justify-between">
                   <div className="w-24 ">
                     <img
                       src={el.image}
@@ -36,17 +36,19 @@ function Cart() {
                     />
                   </div>
                   <div className="m-2  flex flex-col justify-center items-center p-2">
-                    <p>{el.title}</p>
-                    <p>{el.price}</p>
+                    <p text-center lg:text-left>
+                      {el.title}
+                    </p>
+                    <p className="text-center lg:text-left">{el.price}</p>
                   </div>
-                  <div className=" flex justify-center items-center p-2">
+                  <div className=" flex flex-col lg:flex-row justify-center items-center p-2">
                     <div
-                      className="p-1"
+                      className="p-1 cursor-pointer"
                       onClick={() => incrementQunatity(el.id)}
                     >
                       ➕
                     </div>
-                    <div className="p-1">{el.quantity}</div>
+                    <div className="p-1 cursor-pointer">{el.quantity}</div>
                     <div
                       className="p-1"
                       onClick={() => decrementQunatity(el.id)}
