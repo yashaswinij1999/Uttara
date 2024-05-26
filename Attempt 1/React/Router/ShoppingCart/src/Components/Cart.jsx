@@ -1,8 +1,22 @@
 import React from "react";
 import { useCart } from "../Hook/Context";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const { state, dispatch } = useCart();
+  const navigate = useNavigate();
+
+  function incrementQunatity(id) {
+    dispatch({ type: "increment", payload: { id: id } });
+  }
+
+  function decrementQunatity(id) {
+    dispatch({ type: "decrement", payload: { id } });
+  }
+
+  function totalPrice() {
+    return state.reduce((total, el) => total + el.quantity * el.price, 0);
+  }
 
   return (
     <>
@@ -26,13 +40,40 @@ function Cart() {
                     <p>{el.price}</p>
                   </div>
                   <div className=" flex justify-center items-center p-2">
-                    <div className="p-1">➕</div>
-                    <div className="p-1">2</div>
-                    <div className="p-1">➖</div>
+                    <div
+                      className="p-1"
+                      onClick={() => incrementQunatity(el.id)}
+                    >
+                      ➕
+                    </div>
+                    <div className="p-1">{el.quantity}</div>
+                    <div
+                      className="p-1"
+                      onClick={() => decrementQunatity(el.id)}
+                    >
+                      ➖
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
+            <div>
+              <div>Total Items : ${totalPrice()}</div>
+            </div>
+            <div className="m-2">
+              <button
+                className="bg-slate-700 text-white p-2 m-1 rounded-md"
+                onClick={() => navigate("/")}
+              >
+                Continue Shopping
+              </button>
+              <button
+                className="bg-slate-700 text-white p-2 m-1 rounded-md"
+                onClick={() => navigate("/payments")}
+              >
+                Check Out
+              </button>
+            </div>
           </div>
         </div>
       )}
