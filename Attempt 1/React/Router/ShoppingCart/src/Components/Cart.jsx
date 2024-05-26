@@ -25,7 +25,7 @@ function Cart() {
       ) : (
         <div>
           <div className="min-h-screen m-2">
-            <h3 className="mb-2">Your Cart Items</h3>
+            <h3 className="mb-2 text-2xl font-normal">Your Cart Items</h3>
             {state.map((el) => (
               <div key={el.id} className="m-4 ">
                 <div className="flex w-1/2 m-auto h-1/2  bg-white rounded-md shadow-lg justify-between">
@@ -35,11 +35,11 @@ function Cart() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="m-2  flex flex-col justify-center items-center p-2">
-                    <p text-center lg:text-left>
+                  <div className="m-2  flex flex-col justify-center items-center p-2 ">
+                    <p className="text-center lg:text-left font-semibold">
                       {el.title}
                     </p>
-                    <p className="text-center lg:text-left">{el.price}</p>
+                    <p className="text-center lg:text-left">${el.price}</p>
                   </div>
                   <div className=" flex flex-col lg:flex-row justify-center items-center p-2">
                     <div
@@ -60,7 +60,9 @@ function Cart() {
               </div>
             ))}
             <div>
-              <div>Total Items : ${totalPrice()}</div>
+              <div className="text-green-600 font-medium text-xl">
+                Total Items : ${totalPrice()}
+              </div>
             </div>
             <div className="m-2">
               <button
