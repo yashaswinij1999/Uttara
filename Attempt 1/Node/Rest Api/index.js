@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 const fs = require("fs");
+const { getAllData } = require("./Controller/users");
 const data = fs.readFileSync("Users.json");
 const data_json = JSON.parse(data);
 const users = data_json.users;
@@ -31,9 +32,7 @@ app.post("/users/", (req, res) => {
   res.send(req.body);
 });
 
-app.get("/users", (req, res) => {
-  res.send(users);
-});
+app.get("/users", getAllData);
 
 app.listen(5000, () => {
   console.log("server started");
