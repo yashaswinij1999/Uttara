@@ -3,14 +3,16 @@ const app = express();
 
 const mongoose = require("mongoose");
 const User = require("./model/userSchema.js");
-const Controller = require("./Controller/users.js");
+const router = require("./Router/users.js");
 
 app.use(express.json());
 
-app.get("/users", Controller.getUserDetails);
-app.post("/addUsers", Controller.add);
-app.delete("/removeUser/:id", Controller.deleteUser);
-app.patch("/editUser/:id", Controller.edit);
+// app.get("/users", Controller.getUserDetails);
+// app.post("/addUsers", Controller.add);
+// app.delete("/removeUser/:id", Controller.deleteUser);
+// app.patch("/editUser/:id", Controller.edit);
+
+app.use("/users", router);
 
 mongoose
   .connect(
