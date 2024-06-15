@@ -2,18 +2,15 @@ const express = require("express");
 const app = express();
 
 const mongoose = require("mongoose");
-const User = require("./model/userSchema");
+const User = require("./model/userSchema.js");
+const Controller = require("./Controller/users.js");
 
-const u1 = new User({
-  firstName: "Terry",
-  lastName: "Medhurst",
-  emailId: "atuny0@sohu.com",
-  contactNumber: "+63 791 675 8914",
-});
+app.use(express.json());
 
-User.insertMany([u1])
-  .then((data) => console.log(data))
-  .catch((e) => console.log(e));
+app.get("/users", Controller.getUserDetails);
+app.post("/addUsers", Controller.add);
+app.delete("/removeUser/:id", Controller.deleteUser);
+app.patch("/editUser/:id", Controller.edit);
 
 mongoose
   .connect(
