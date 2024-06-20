@@ -1,10 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Users from "./Components/Users";
+import Navbar from "./Components/Navbar";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Users />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
