@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { usersContext } from "./Users";
+import { usersContext } from "../Hooks/UserContext";
 
 function UserItem() {
-  const data = useContext(usersContext);
+  const { data } = useContext(usersContext);
 
   return (
     <>
