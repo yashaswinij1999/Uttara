@@ -30,9 +30,39 @@ function UserContext({ children }) {
     }
   };
 
+  const editUser = async function (id, editTask) {
+    try {
+      const response = await axios.patch(
+        `http://localhost:3000/users/editUser/${id}`,
+        {
+          firstName: editTask.firstName,
+          lastName: editTask.lastName,
+          emailId: editTask.emailId,
+          contactNumber: editTask.contactNumber,
+        }
+      );
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const removeUser = async function (id) {
+    try {
+      const remove = await axios.delete(
+        `http://localhost:3000/users/removeUser/${id}`
+      );
+      setData(remove.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
-      <usersContext.Provider value={{ data, getData, addUser }}>
+      <usersContext.Provider
+        value={{ data, getData, addUser, editUser, removeUser }}
+      >
         {children}
       </usersContext.Provider>
     </>
