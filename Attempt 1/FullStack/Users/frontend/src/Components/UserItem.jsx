@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { usersContext } from "../Hooks/UserContext";
+import { useNavigate } from "react-router-dom";
 
 function UserItem() {
-  const { data } = useContext(usersContext);
+  const { data, removeUser } = useContext(usersContext);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -18,11 +20,25 @@ function UserItem() {
         <tbody>
           {data.map((el) => (
             <>
-              <tr key={el._id} className="odd:bg-gray-100 even:bg-gray-200">
-                <td className="border p-2">{el.firstName}</td>
-                <td className="border p-2">{el.lastName}</td>
-                <td className="border p-2">{el.emailId}</td>
-                <td className="border p-2">{el.contactNumber}</td>
+              <tr key={el._id}>
+                <td className="border p-2 bg-gray-100">{el.firstName}</td>
+                <td className="border p-2 bg-gray-100">{el.lastName}</td>
+                <td className="border p-2 bg-gray-100">{el.emailId}</td>
+                <td className="border p-2 bg-gray-100">{el.contactNumber}</td>
+                <td>
+                  <button
+                    className="p-1 border-2 ml-2 rounded-lg text-white bg-green-400"
+                    onClick={() => navigate(`edit/${el._id}`)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="p-1 border-2 ml-2 rounded-lg text-white bg-red-400"
+                    onClick={() => removeUser(el._id)}
+                  >
+                    delete
+                  </button>
+                </td>
               </tr>
             </>
           ))}
