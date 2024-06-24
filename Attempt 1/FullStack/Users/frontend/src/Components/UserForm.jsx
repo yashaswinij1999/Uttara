@@ -6,7 +6,7 @@ function UserForm() {
     firstName: "",
     lastName: "",
     emailId: "",
-    contactNumber: 0,
+    contactNumber: "",
   });
 
   const { addUser } = useContext(usersContext);
@@ -25,7 +25,7 @@ function UserForm() {
       firstName: "",
       lastName: "",
       emailId: "",
-      contactNumber: 0,
+      contactNumber: "",
     });
   }
 
@@ -88,7 +88,7 @@ function UserForm() {
         </div>
         <div className="relative z-0 w-full mb-5 group">
           <input
-            type="number"
+            type="text"
             name="contactNumber"
             id="contactNumber"
             value={userData.contactNumber}
