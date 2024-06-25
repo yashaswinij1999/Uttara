@@ -3,9 +3,11 @@ import { cartContext } from "../Hooks/CartContext";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 import TotalPrice from "./TotalPrice";
+import { useNavigate } from "react-router-dom";
 
 function CartItem() {
   const { state, increment, decrementQuantity } = useContext(cartContext);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -33,6 +35,20 @@ function CartItem() {
         </div>
       ))}
       <TotalPrice />
+      <div className="flex gap-2">
+        <button
+          className="bg-slate-700 text-white p-2 rounded-lg"
+          onClick={() => navigate("/")}
+        >
+          Continue Shopping
+        </button>
+        <button
+          className="bg-slate-700 text-white p-2 rounded-lg"
+          onClick={() => navigate("/checkout")}
+        >
+          CheckOut
+        </button>
+      </div>
     </>
   );
 }
