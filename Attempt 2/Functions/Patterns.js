@@ -6,7 +6,7 @@ function samePatterns() {
     }
   }
 }
-samePatterns();
+// samePatterns();
 
 function increasingPattern() {
   for (let i = 1; i <= 5; i++) {
@@ -15,3 +15,13 @@ function increasingPattern() {
     }
   }
 }
+// increasingPattern();
+
+function decreasingPattern() {
+  for (let i = 5; i >= 1; i--) {
+    for (let j = 1; j <= i; j++) {
+      console.log(j);
+    }
+  }
+}
+decreasingPattern();
