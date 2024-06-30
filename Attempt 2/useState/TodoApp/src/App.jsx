@@ -4,7 +4,9 @@ import Form from "./components/Form";
 function App() {
   return (
     <>
-      <Form />
+      <div className=" flex-col min-h-screen flex justify-center items-center   border-2 ">
+        <Form />
+      </div>
     </>
   );
 }
