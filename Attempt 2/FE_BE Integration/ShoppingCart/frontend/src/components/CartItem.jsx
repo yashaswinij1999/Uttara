@@ -29,26 +29,28 @@ function CartItem() {
   return (
     <>
       {state.map((el) => (
-        <div className=" w-1/2 p-2 " key={el._id}>
-          <div className=" h-40  m-2 flex shadow-lg">
-            <div className="h-40 w-1/3  p-2 flex items-center justify-center mt-2">
-              <img src={el.image} className="h-36 " />
-            </div>
-            <div className="h-24 w-1/2  p-2 mt-6 text-center font-semibold">
-              <div> {el.title}</div>
-              <div>${el.price}</div>
-            </div>
-            <div className="h-40 w-1/3 p-2 flex justify-center items-center gap-2">
-              <div onClick={() => decrement(el._id)}>
-                <FaMinus />
+        <>
+          <div className=" w-1/2 p-2 " key={el._id}>
+            <div className=" h-40  m-2 flex shadow-lg">
+              <div className="h-40 w-1/3  p-2 flex items-center justify-center mt-2">
+                <img src={el.image} className="h-36 " />
               </div>
-              <div>{el.qty}</div>
-              <div onClick={() => increment(el._id)}>
-                <FaPlus />
+              <div className="h-24 w-1/2  p-2 mt-6 text-center font-semibold">
+                <div> {el.title}</div>
+                <div>${el.price}</div>
+              </div>
+              <div className="h-40 w-1/3 p-2 flex justify-center items-center gap-2">
+                <div onClick={() => decrement(el._id)}>
+                  <FaMinus />
+                </div>
+                <div>{el.qty}</div>
+                <div onClick={() => increment(el._id)}>
+                  <FaPlus />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </>
       ))}
     </>
   );
