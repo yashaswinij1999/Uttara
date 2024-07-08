@@ -1,4 +1,5 @@
-import { createContext, useReducer } from "react";
+import axios from "axios";
+import { createContext, useEffect, useReducer } from "react";
 
 export const cartContext = createContext();
 
@@ -28,11 +29,38 @@ const reducer = (state, action) => {
         ];
       }
     }
+    case "get":
+      return action.payload;
+
+    case "increment":
+      return state.map((el) =>
+        el._id === action.payload.id ? { ...el, qty: el.qty + 1 } : el
+      );
+
+    case "decrement":
+      return state
+        .map((el) =>
+          el._id === action.payload.id ? { ...el, qty: el.qty - 1 } : el
+        )
+        .filter((el) => el.qty > 1);
   }
 };
 
 function UseContext({ children }) {
   const [state, dispatch] = useReducer(reducer, []);
+
+  useEffect(() => {
+    getCart();
+  }, []);
+
+  async function getCart() {
+    try {
+      const response = await axios.get("http://localhost:3000/shopApp/getCart");
+      dispatch({ type: "get", payload: response.data });
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <>

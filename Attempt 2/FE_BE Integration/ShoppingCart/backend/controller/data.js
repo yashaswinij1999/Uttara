@@ -1,6 +1,40 @@
 const Product = require("../model/product");
 const Cart = require("../model/cart");
 
+const decrement = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const product = await Cart.findById({ _id: id });
+    console.log(product);
+    if (product) {
+      if (product.qty > 1) {
+        product.qty -= 1;
+        product.save();
+        res.send(product);
+      } else {
+        const removeProduct = await Cart.findByIdAndDelete({ _id: id });
+        res.send(removeProduct);
+      }
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const increment = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const product = await Cart.findById({ _id: id });
+    if (product) {
+      product.qty += 1;
+      product.save();
+      res.send(product);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const getCart = async (req, res) => {
   try {
     const data = await Cart.find({});
@@ -39,4 +73,4 @@ const getProducts = async (req, res) => {
   }
 };
 
-module.exports = { getProducts, addToCart, getCart };
+module.exports = { getProducts, addToCart, getCart, increment, decrement };

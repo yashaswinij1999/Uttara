@@ -1,8 +1,30 @@
 import { useContext } from "react";
 import { cartContext } from "../Hooks/UseContext";
+import axios from "axios";
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa";
 
 function CartItem() {
-  const { state } = useContext(cartContext);
+  const { state, dispatch } = useContext(cartContext);
+
+  async function increment(id) {
+    console.log("clicked");
+    try {
+      await axios.patch(`http://localhost:3000/shopApp/increment/${id}`);
+      dispatch({ type: "increment", payload: { id } });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function decrement(id) {
+    try {
+      await axios.patch(`http://localhost:3000/shopApp/decrement/${id}`);
+      dispatch({ type: "decrement", payload: { id } });
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <>
@@ -17,9 +39,13 @@ function CartItem() {
               <div>${el.price}</div>
             </div>
             <div className="h-40 w-1/3 p-2 flex justify-center items-center gap-2">
-              <div className="text-3xl font-semibold">-</div>
-              <div className="text-xl font-semibold">{el.qty}</div>
-              <div className="text-3xl font-semibold">+</div>
+              <div onClick={() => decrement(el._id)}>
+                <FaMinus />
+              </div>
+              <div>{el.qty}</div>
+              <div onClick={() => increment(el._id)}>
+                <FaPlus />
+              </div>
             </div>
           </div>
         </div>
