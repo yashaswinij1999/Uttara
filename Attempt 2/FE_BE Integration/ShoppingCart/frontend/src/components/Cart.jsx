@@ -15,7 +15,6 @@ function Cart() {
       ) : (
         <div className="flex flex-col justify-center items-center min-h-screen ">
           <div className="text-2xl ">Cart Item</div>
-
           <CartItem />
           <TotalPrice />
           <div className="flex  gap-4">
